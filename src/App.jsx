@@ -32,7 +32,14 @@ function App() {
     setGameStart(true);
   };
 
-  const reset = () => window.location.reload();
+  const reset = () => {
+    setUserChoice("rock")
+    setComputerChoice("scissor")
+    setUserScore(0)
+    setComputerScore(0)
+    setResult("Let's Play")
+    setGameStart(false)
+  };
 
   const rules = () => {
     if (userChoice === computerChoice) {
